@@ -125,6 +125,31 @@ class App{
         return li
     }
 
+    reprintList(option){
+        const ul = document.getElementById('itemList')
+        ul.innerHTML = ""
+
+        this.items.forEach(function(element) {
+            if(option == "fav"){
+                if(element.fav){
+                    var listItem = this.renderListItem(element);
+                    if(element.fav){
+                        listItem.style.backgroundColor = "#6699ff"
+                    }
+                    this.list.appendChild(listItem)   
+                }
+            }else{
+                var listItem = this.renderListItem(element);
+                if(element.fav){
+                    listItem.style.backgroundColor = "#6699ff"
+                }
+                this.list.appendChild(listItem)  
+            }
+                 
+        }, this);
+
+    }
+
 
 }
 
