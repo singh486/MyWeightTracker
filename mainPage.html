@@ -10,8 +10,56 @@
 </head>
 <body>
 
+        <header><h1>Todo List</h1></header>
+        
+        <main>
+            <form id = "itemForm">
+                <div class="input-group">
+                    <input 
+                    type="text" 
+                    class="input-group-field"
+                    name = "itemName"
+                    autofocus
+                    required
+                    placeholder="Add a description"
+                    >
+                    <div><input id="date" type="date" class= "input-group-field" required></div>
+                    
+                    
+                    <div class="input-group-button">
+                        <button class= "button success" type= "submit">
+                            Add item
+                        </button>
+                    </div>
+                </div>
+            </form>
+    
+            <label for="select">View by</label>
+            <select id="select">
+                <option id="all">All</option>
+                <option id="earlyToLate">Earliest to Latest</option>
+                <option id="lateToEarly">Latest to Earliest</option>
+                <option id="favorites">Favorites</option>
+            </select>
+    
+            <ul id= "itemList" class="no-bullet">
+                <li class= "template item grid-x align-middle" id = "li">
+                    <span class="itemName cell auto"></span>
+                    <div class="auto"id = "dateDisplay"></div>
+                    <span class="actions cell shrink">
+                        <button class="button alert" id="delete">🗑️</button>
+                        <button class="button warning" id="favorite">✰</button>
+                        <button class="edit button" id="edit">✎</button>
+                        <button class="button" id="up">⬆</button>
+                        <button class="button" id="down">⬇</button>
+                        
+                    </span>
+                </li>
+            </ul>
+        </main>
+    
 
-<!-- <script src = "login.js"></script> -->
+<script src = "mainPage.js"></script>
     
 </body>
 </html>
