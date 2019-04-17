@@ -31,6 +31,14 @@ class App{
                     this.bubbleSort(1)
                     this.reprintList()
                     break
+                case "Least to Greatest":
+                    this.bubbleSort(2)
+                    this.reprintList()
+                    break
+                case "Greatest to Least":
+                    this.bubbleSort(3)
+                    this.reprintList()
+                    break
                 case "Favorites":
                     this.reprintList("fav")
                     break
@@ -188,10 +196,30 @@ class App{
                     }
                 }
             }
-        }else{//high to low
+        }else if(option == 1){//high to low
             for(var i=0; i<this.items.length; i++){
                 for(var j=0; j<this.items.length - 1; j++){
                     if(this.items[j].date < this.items[j+1].date){
+                        var temp = this.items[j]
+                        this.items[j] = this.items[j+1]
+                        this.items[j+1] = temp
+                    }
+                }
+            }
+        }else if(option == 2){//least to greatest
+            for(var i=0; i<this.items.length; i++){
+                for(var j=0; j<this.items.length - 1; j++){
+                    if(this.items[j].name < this.items[j+1].name){
+                        var temp = this.items[j]
+                        this.items[j] = this.items[j+1]
+                        this.items[j+1] = temp
+                    }
+                }
+            }
+        }else if(option == 3){//greatest to least
+            for(var i=0; i<this.items.length; i++){
+                for(var j=0; j<this.items.length - 1; j++){
+                    if(this.items[j].name > this.items[j+1].name){
                         var temp = this.items[j]
                         this.items[j] = this.items[j+1]
                         this.items[j+1] = temp

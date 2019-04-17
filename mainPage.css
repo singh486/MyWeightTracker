@@ -1,3 +1,13 @@
 .template{
     display: none;
 }
+
+#dateDisplay{
+    text-align: left;
+    padding: 10px;
+}
+
+.itemName{
+    padding: 10px;
+}
+

@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+  
   <link rel="stylesheet" type= "text/css" href="mainPage.css">  
 </head>
 <body>
@@ -40,14 +40,16 @@
                 <option id="all">All</option>
                 <option id="earlyToLate">Earliest to Latest</option>
                 <option id="lateToEarly">Latest to Earliest</option>
+                <option id="leastToGreatest">Least to Greatest</option>
+                <option id="greatestToLeast">Greatest to Least</option>
                 <option id="favorites">Favorites</option>
             </select>
-    
+                    
             <ul id= "itemList" class="no-bullet">
                 <li class= "template item grid-x align-middle" id = "li">
                     <span class="itemName cell auto"></span>
                     <div class="auto"id = "dateDisplay"></div>
-                    <span class="actions cell shrink">
+                    <span id="mainSpan" class="actions cell shrink">
                         <button class="button alert" id="delete">🗑️</button>
                         <button class="button warning" id="favorite">✰</button>
                         <button class="edit button" id="edit">✎</button>
@@ -57,6 +59,7 @@
                     </span>
                 </li>
             </ul>
+
         </main>
     
 
