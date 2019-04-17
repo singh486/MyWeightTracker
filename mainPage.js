@@ -150,6 +150,12 @@ class App{
 
     }
 
+    saveOnEnter(li, input, ev){
+        if(ev.key === 'Enter'){
+            this.toggleEditable(li, input)
+        }
+    }
+
 
 }
 
