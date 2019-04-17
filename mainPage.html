@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+  
+  <link rel="stylesheet" type= "text/css" href="mainPage.css">  
+</head>
+<body>
+
+        <header>
+            <h1>MyWeightTracker</h1>
+         </header>
+
+         <div class="dropdown">
+                <button class="dropbtn">Menu</button>
+                <div class="dropdown-content">
+                  <a href="#">Home</a>
+                  <a href="#">Analysis</a>
+                  <a href="#">Logout</a>
+                </div>
+        </div>
+        
+        <main>
+            <form id = "itemForm">
+                <div class="input-group">
+                    <input 
+                    type="number" 
+                    class="input-group-field"
+                    name = "itemName"
+                    autofocus
+                    required
+                    placeholder="Add weight here"
+                    >
+                    <div><input id="date" type="date" class= "input-group-field" required></div>
+                    
+                    
+                    <div class="input-group-button">
+                        <button class= "button success" type= "submit">
+                            Add item
+                        </button>
+                    </div>
+                </div>
+            </form>
+    
+            <label for="select">View by</label>
+            <select id="select">
+                <option id="all">All</option>
+                <option id="earlyToLate">Earliest to Latest</option>
+                <option id="lateToEarly">Latest to Earliest</option>
+                <option id="leastToGreatest">Least to Greatest</option>
+                <option id="greatestToLeast">Greatest to Least</option>
+                <option id="favorites">Favorites</option>
+            </select>
+                    
+            <ul id= "itemList" class="no-bullet">
+                <li class= "template item grid-x align-middle" id = "li">
+                    <span class="itemName cell auto"></span>
+                    <div class="auto"id = "dateDisplay"></div>
+                    <span id="mainSpan" class="actions cell shrink">
+                        <button class="button alert" id="delete">🗑️</button>
+                        <button class="button warning" id="favorite">✰</button>
+                        <button class="edit button" id="edit">✎</button>
+                        <button class="button" id="up">⬆</button>
+                        <button class="button" id="down">⬇</button>
+                        
+                    </span>
+                </li>
+            </ul>
+
+        </main>
+    
+
+<script src = "mainPage.js"></script>
+    
+</body>
+</html>
