@@ -156,6 +156,26 @@ class App{
         }
     }
 
+    toggleEditable(li,input,ev){
+        console.log(li.querySelector(".itemName").textContent)
+        const nameField = li.querySelector('.itemName')
+        const dateField = li.querySelector('#dateDisplay')
+        const btn = li.querySelector('#edit')
+        if(nameField.isContentEditable){
+            nameField.contentEditable = false
+            dateField.contentEditable = false
+
+            btn.textContent = "✎"
+
+            input.name = nameField.textContent
+            input.date  = dateField.textContent
+        }else{
+            nameField.contentEditable = true
+            dateField.contentEditable = true
+            nameField.focus()
+            btn.textContent = 'save'
+        }
+    }
 
 }
 
