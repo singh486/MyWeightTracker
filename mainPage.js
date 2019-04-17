@@ -177,6 +177,30 @@ class App{
         }
     }
 
+    bubbleSort(option){
+        if(option == 0){//low to high
+            for(var i=0; i<this.items.length; i++){
+                for(var j=0; j<this.items.length - 1; j++){
+                    if(this.items[j].date > this.items[j+1].date){
+                        var temp = this.items[j]
+                        this.items[j] = this.items[j+1]
+                        this.items[j+1] = temp
+                    }
+                }
+            }
+        }else{//high to low
+            for(var i=0; i<this.items.length; i++){
+                for(var j=0; j<this.items.length - 1; j++){
+                    if(this.items[j].date < this.items[j+1].date){
+                        var temp = this.items[j]
+                        this.items[j] = this.items[j+1]
+                        this.items[j+1] = temp
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 const app = new App({
