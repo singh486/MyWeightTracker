@@ -238,5 +238,5 @@ const app = new App({
     templateSelector: '.item.template',
 })
 
-export default App;
+
 app.viewBy()
