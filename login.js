@@ -3,3 +3,7 @@ function validate(){
     console.log("test")
     window.location.href = "mainPage.html"
 }
+
+function signUp(){
+    console.log("signUp")
+}
