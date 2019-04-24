@@ -11,6 +11,10 @@
   padding: 10px;
 }
 
+#itemForm{
+    padding: 20px;
+}
+
 .dropbtn {
   background-color: #4caf50;
   color: white;

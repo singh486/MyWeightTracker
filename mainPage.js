@@ -5,13 +5,15 @@ class App{
         this.list = document.querySelector(selectors.listSelector)
         this.template = document.querySelector(selectors.templateSelector)
 
-        document
-            .querySelector(selectors.formSelector)
-            .addEventListener('submit', ev => {
-                ev.preventDefault()
-                this.handleSubmit(ev)
-            })
+        if( document.querySelector(selectors.formSelector)){
+                document
+                .querySelector(selectors.formSelector)
+                .addEventListener('submit', ev => {
+                    ev.preventDefault()
+                    this.handleSubmit(ev)
+                })
 
+        }
 
     }
 
@@ -228,7 +230,6 @@ class App{
             }
         }
     }
-
 }
 
 const app = new App({
@@ -236,5 +237,6 @@ const app = new App({
     listSelector: '#itemList',
     templateSelector: '.item.template',
 })
+
 
 app.viewBy()
