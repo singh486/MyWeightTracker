@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-firestore.js"></script>
+  <link rel="stylesheet" type= "text/css" href="login.css">
 </head>
 <body>
 
@@ -15,20 +18,56 @@
   <form onsubmit="validate(); return false;">
     <div class="form-group">
       <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
     </div>
     <div class="form-group">
       <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" required>
     </div>
     <div class="checkbox">
       <label><input type="checkbox" name="remember"> Remember me</label>
     </div>
-    <button type="submit" class="btn btn-default" id = "submit" >Submit</button>
+    <button type="submit" class="btn btn-success" id = "submit" >Submit</button>
+    
   </form>
+    <p></p>
+    <button class="btn btn-success" id = "signUp" onclick="signUp();">Sign Up</button>
+    
 </div>
 
 <script src = "login.js"></script>
+
+<script>
+    var config = {
+      apiKey: "AIzaSyDo88tvxZlnPqj9qhOj7LLPeCq2HrrEzhw",
+      authDomain: "myweighttracker-75d1e.firebaseapp.com",
+      databaseURL: "https://myweighttracker-75d1e.firebaseio.com",
+      projectId: "myweighttracker-75d1e",
+      storageBucket: "myweighttracker-75d1e.appspot.com",
+      messagingSenderId: "771221100990"
+    };
+    const app = firebase.initializeApp(config);
+    var db = firebase.firestore();
+    //var em = document.getElementById("ermail").value;
+    //var pas = document.getElementById("pwd").value;
+    console.log("The email from the document id shit is here: " + email);
+    console.log("The password from the document id shit is here" + password); 
+    
+    /*db.collection("users").add({
+      email: email,
+      password: password
+    })
+    .then(function(docRef) {
+      console.log("Document written with ID: ", docRef.id);
+    })
+    .catch(function(error) {
+      console.error("Error adding document: ", error);
+    });
+
+*/
+
+
+  </script>
 
 </body>
 </html>
