@@ -1,3 +1,5 @@
+
+
 function validate(){
     //validate user information here
     console.log("test")
@@ -9,7 +11,7 @@ function signUp(){
     var password = document.getElementById("pwd").value
     ValidateEmail(email)
     ValidatePassword(password)
-    
+
     console.log(email)
     console.log(password)
 }
