@@ -1,0 +1,26 @@
+{
+  "name": "myweighttracker",
+  "version": "1.0.0",
+  "description": "Members: 1) Jasmine Singh: singh486@purdue.edu 2) Prasha Bora: pbora@purdue.edu 3) Neha Parmar: parmarn@purdue.edu",
+  "main": "Fire.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/singh486/MyWeightTracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/singh486/MyWeightTracker/issues"
+  },
+  "homepage": "https://github.com/singh486/MyWeightTracker#readme",
+  "dependencies": {
+    "firebase": "^5.10.0"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.0.0",
+    "desiredModule": "/Users/nehaparmar/Desktop/MyWeightTracker/node_modules/@firebase/firestore"
+  }
+}
