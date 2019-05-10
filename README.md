@@ -7,7 +7,7 @@ Members:
 
 Description:
 MyWeightTracker
-A web application to track each user's weight. It will include corresponding graphs and analysis.
+A web application to track each user's weight.
 
 Technologies:
-We will be using JavaScript, HTML, charts.js, and MongoDB. Additional technologies may be added depending on our project's progress
+We used JavaScript, HTML, Firebase, and Github Pages. Additional technologies may be added depending on our project's progress.
